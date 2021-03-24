@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+  font-weight: 300;
+}
+
+.all-offers {
+  padding: 16px;
+}
+
+.single-offer {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  max-width: 343px;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.single-offer span {
+  font-size: 14px;
+}
+
+.single-offer button {
+  background: #0468FF;
+  border: 0;
+  color: #fff;
+  height: 40px;
+  max-width: 311px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.offer-rates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.offer-rates span {
+  font-size: 14px;
+  color: #737A8E;
+}
+
+.offer-rates p {
+  font-weight: 700;
+}
+
+.startSort {
+  display: flex;
+  flex-direction: column;
+}
