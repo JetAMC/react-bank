@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function SortOffers(props) {
     const [close, setClose] = useState(false);
-    console.log(props.onChange);
+    // console.log(props.onChange);
     return (
         <div className="sortOffers">
             <button onClick={() => setClose(close => !close)}>Sort</button>

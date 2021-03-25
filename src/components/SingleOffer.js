@@ -9,8 +9,13 @@ const bankObj = {
     'bank-delta': 'ДЕЛЬТА'
 }
 
-function SingleOffer({offer}) {
+function SingleOffer({offer, open}) {
     const product = offer.product === 'NEW' ? 'Новостройка' : 'Старый дом';
+
+    function handleClick() {
+        open(offer);
+    }
+    
     return (
         <div>
             <div className="single-offer">
@@ -32,7 +37,7 @@ function SingleOffer({offer}) {
                         <p>{offer.minInitialPayment * 100 + '%'}</p>
                     </div>
                 </div>
-                <button>Хочу консультацию</button>
+                <button onClick={handleClick}>Хочу консультацию</button>
             </div>
         </div>
     )
