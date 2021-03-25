@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 
 function SortOffers(props) {
     const [close, setClose] = useState(false);
-    console.log(props);
+    console.log(props.onChange);
     return (
         <div className="sortOffers">
-            <button onClick={() => setClose(close => !close)}>test</button>
+            <button onClick={() => setClose(close => !close)}>Sort</button>
             {close && 
                 <div className="startSort">
                     <label>
