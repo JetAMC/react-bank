@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 
-function SortOffers({rateSort}) {
+function SortOffers({sort, rateSort}) {
     const [close, setClose] = useState(false);
-
     function handleClick(event) {
-        console.log(event.target.value);
-        if (event.target.value === 'percent') {
-            rateSort();
-        }
+        rateSort(event.target.value);
     }
 
 
@@ -17,13 +13,13 @@ function SortOffers({rateSort}) {
             {close && 
                 <div className="startSort">
                     <label>
-                        <input type="radio" onChange={handleClick} name="sortOffer" value="percent" />Меньше процент
+                        <input type="radio" onChange={handleClick} checked={sort === 'percent'} name="sortOffer" value="percent" />Меньше процент
                     </label>
                     <label>
-                        <input type="radio" onChange={handleClick} name="sortOffer" value="credit" />Больше кредит
+                        <input type="radio" onChange={handleClick} checked={sort === 'credit'} name="sortOffer" value="credit" />Больше кредит
                     </label>
                     <label>
-                        <input type="radio" onChange={handleClick} name="sortOffer" value="firstPayment" />Меньше взнос
+                        <input type="radio" onChange={handleClick} checked={sort === 'firstPayment'} name="sortOffer" value="firstPayment" />Меньше взнос
                     </label>
                 </div>
             }
@@ -32,3 +28,5 @@ function SortOffers({rateSort}) {
 }
 
 export default SortOffers
+
+// https://prod.liveshare.vsengsaas.visualstudio.com/join?604F2BF9BBD2C4A2A6B5334804F584278C4F

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../index.css'
+import Features from './Features'
 
 const bankObj = {
     'bank-psb': 'ПСБ',
@@ -23,6 +24,7 @@ function SingleOffer({offer, open}) {
                     <h3>{bankObj[offer.bankId]}</h3>
                     <span>{product}</span>
                 </div>
+                <div className="offer-features"><Features offer={offer}/></div>
                 <div className="offer-rates">
                     <div>
                         <span>Ставка</span>

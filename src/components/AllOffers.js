@@ -3,31 +3,24 @@ import offers from './offers'
 import SingleOffer from './SingleOffer'
 import SortOffers from './SortOffers'
 
+const comparators = {
+    percent: (a, b) => a.rate < b.rate ? -1 : 1,
+    credit: (a, b) => a.maxAmount > b.maxAmount ? -1 : 1,
+    firstPayment: (a, b) => a.minInitialPayment < b.minInitialPayment ? -1 : 1,
+};
 
 function AllOffers(props) {
-    const sortedArr = [...offers.offers];
-    // sortedArr.sort((a, b) => {
-    //     // console.log(a.maxAmount);
-    //     return a.rate < b.rate ? -1 : 1;
-    // });
-    // pri klike na input, pokazatj kakoj input kliknut
-    // veshaem oncahge odinakovij u vseh + handlchange funkcija, prinimet event i tam, budet value
-
+    // console.log(sortedArr)
     // https://ru.reactjs.org/docs/lifting-state-up.html
-
-    // v zavisimoti ot tipa sort delatj sortirovku
-
-    const [sort, setSort] = useState(null);
-
-    function rateSort() {
-        setSort(sortedArr.sort((a, b) => a.rate < b.rate ? -1 : 1));
-    }
-
-    // sortedArr.sort((a, b) => a.rate < b.rate ? -1 : 1)
+    // dokumentacija react perepisana na hukah
+    
+    const [sort, setSort] = useState('percent');
+    const sortedArr = [...offers.offers].sort(comparators[sort]);
+    // console.log(sortedArr);
 
     return(
         <div className="all-offers">
-            <SortOffers sort={sort} rateSort={rateSort} />
+            <SortOffers sort={sort} rateSort={setSort} />
             {sortedArr.map(offer => {
                 return <SingleOffer offer={offer} open={props.open} />
             })}
