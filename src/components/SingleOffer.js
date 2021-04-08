@@ -16,7 +16,7 @@ function SingleOffer({offer, open}) {
     function handleClick() {
         open(offer);
     }
-    
+    // console.log(offer);
     return (
         <div>
             <div className="single-offer">
@@ -24,7 +24,7 @@ function SingleOffer({offer, open}) {
                     <h3>{bankObj[offer.bankId]}</h3>
                     <span>{product}</span>
                 </div>
-                <div className="offer-features"><Features offer={offer}/></div>
+                <Features features={offer.features} />
                 <div className="offer-rates">
                     <div>
                         <span>Ставка</span>

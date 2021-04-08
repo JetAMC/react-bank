@@ -116,3 +116,30 @@ body {
 .open {
   display: block;
 }
+
+.offer-features {
+  display: flex;
+  align-items: center;
+}
+
+.features p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0468FF;
+  background: rgba(4, 104, 255, 0.1);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 8px;
+}
+
+.other-features {
+  display: flex;
+}
+
+.other-features span {
+  border: 1px solid rgba(4, 104, 255, 0.1);
+  border-radius: 4px;
+  color: #0468FF;
+  padding: 2px 8px;
+  /* cursor: pointer; */
+}
