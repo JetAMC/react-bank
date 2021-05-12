@@ -10,13 +10,12 @@ const comparators = {
 };
 
 function AllOffers(props) {
-    // console.log(sortedArr)
     // https://ru.reactjs.org/docs/lifting-state-up.html
     // dokumentacija react perepisana na hukah
-    
+
+
     const [sort, setSort] = useState('percent');
     const sortedArr = [...offers.offers].sort(comparators[sort]);
-    // console.log(sortedArr);
 
     return(
         <div className="all-offers">

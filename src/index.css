@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 body {
   font-weight: 300;
@@ -16,7 +16,6 @@ body {
 }
 
 .single-offer {
-  font-size: 18px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -32,7 +31,7 @@ body {
   font-size: 14px;
 }
 
-.single-offer button {
+.single-offer .offer-button {
   background: #0468FF;
   border: 0;
   color: #fff;
@@ -50,6 +49,7 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
   line-height: 24px;
+  font-size: 18px;
 }
 
 .offer-rates span {
@@ -122,6 +122,14 @@ body {
   align-items: center;
 }
 
+.feature-list-title {
+  margin-bottom: 18px;
+}
+.feature-list-title h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
 .features p {
   font-size: 14px;
   font-weight: 400;
@@ -142,4 +150,26 @@ body {
   color: #0468FF;
   padding: 2px 8px;
   /* cursor: pointer; */
+}
+
+.features p {
+  margin-bottom: 5px;
+}
+
+.feature-name {
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.feature-name h3 {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.feature-description {
+  font-size: 16px;
+  margin-bottom: 18px;
 }

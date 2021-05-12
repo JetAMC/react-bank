@@ -1,30 +1,21 @@
 import React from 'react'
 import '../index.css'
 import Features from './Features'
-
-const bankObj = {
-    'bank-psb': 'ПСБ',
-    'bank-gpb': 'ГПБ',
-    'bank-vtb': 'ВТБ',
-    'bank-raif': 'РАИФ',
-    'bank-delta': 'ДЕЛЬТА'
-}
+import BankNames from '../BankNames.json'
+import ApartmentType from '../ApartmentType.json'
 
 function SingleOffer({offer, open}) {
-    const product = offer.product === 'NEW' ? 'Новостройка' : 'Старый дом';
-
     function handleClick() {
         open(offer);
     }
-    // console.log(offer);
     return (
         <div>
             <div className="single-offer">
                 <div>
-                    <h3>{bankObj[offer.bankId]}</h3>
-                    <span>{product}</span>
+                    <h3>{BankNames[offer.bankId]}</h3>
+                    <span>{ApartmentType[offer.product]}</span>
                 </div>
-                <Features features={offer.features} />
+                <Features id={offer.offerId} features={offer.features} />
                 <div className="offer-rates">
                     <div>
                         <span>Ставка</span>
@@ -39,7 +30,7 @@ function SingleOffer({offer, open}) {
                         <p>{offer.minInitialPayment * 100 + '%'}</p>
                     </div>
                 </div>
-                <button onClick={handleClick}>Хочу консультацию</button>
+                <button className="offer-button" onClick={handleClick}>Хочу консультацию</button>
             </div>
         </div>
     )

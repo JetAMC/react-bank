@@ -1,0 +1,6 @@
+{
+    "GOS_HELP_COVID": {"description":"<p>Gos help covid, Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>", "theme":"orange", "icon":"percent"},
+    "VTB_PAYMENT": {"description":"<p>vtb payment, Lorem ipsum dolor sit amet, consectetur</p>", "theme":"orange", "icon":"stroke"},
+    "MATERNITY_CAPITAL":{"description":"<p>maternity capital, Lorem ipsum dolor sit amet, consectetur</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>", "theme":"green", "icon":"stroke"},
+    "VTB_ONLINE":{"description":"<p>vtb online, Lorem ipsum dolor sit amet</p>", "theme":"blue", "icon":"house"}
+}
