@@ -13,6 +13,8 @@ body {
 
 .all-offers {
   padding: 16px;
+  max-width: 375px;
+  width: 100%;
 }
 
 .single-offer {
@@ -21,7 +23,6 @@ body {
   flex-direction: column;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
-  max-width: 343px;
   width: 100%;
   margin-bottom: 16px;
   padding: 16px;
@@ -173,3 +174,84 @@ body {
   font-size: 16px;
   margin-bottom: 18px;
 }
+
+.main-page {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.range-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-input label {
+  position: relative;
+}
+
+.range-input label p {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  top: 9px;
+  right: 9px;
+}
+
+.range-filter {
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.range-filter h4 {
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  width: 311px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #CED1D7;
+  outline: none;
+  padding: 12px;
+}
+
+input[type="range"] {
+  padding: 0 12px;
+  position: relative;
+  top: -9px;
+  background: transparent;
+  overflow: hidden;
+  background: transparent;
+}
+
+input[type="range"]::-moz-range-progress, input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-webkit-slider-thumb {
+  background: #0468FF;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.radio-buttons {
+  width: 311px;
+  display: flex;
+}
+
+.radio-buttons label {
+  margin-right: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 24px;
+  background: rgba(21, 34, 66, 0.06);
+}
+
+/* .custom-input input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+} */
+
