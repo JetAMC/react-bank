@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { ReactComponent as Percent } from '../img/percent.svg';
 import { ReactComponent as Stroke } from '../img/stroke.svg';
 import { ReactComponent as House } from '../img/house.svg';
@@ -18,24 +18,37 @@ const nameIdColors = {
 }
 
 function FeatureWithDescription({nameId}) {
+    const description = useRef()
+
     const data = FeatureData[nameId];
     const Icon = iconFeature[data.icon];
     const elementColor = nameIdColors[data.theme];
+
+    const [quantity, setQuantity] = useState(0);
+
+    useEffect(() => {
+        const paragraph = description.current.querySelectorAll('p');
+        setQuantity(paragraph.length);
+        
+    }, []);
+
     return (
         <div>
             <div className="feature-name" style={elementColor}>
                 <Icon fill={elementColor.color} />
                 <h3>{FeatureNames[nameId]}</h3>
             </div>
-            <div className="feature-description" dangerouslySetInnerHTML={{__html: data.description}} />
-            <button>Читать больше</button>
+            <div ref={description} className="feature-description" dangerouslySetInnerHTML={{__html: data.description}} />
+            {quantity > 1 && <button>Читать больше</button>}
         </div>
     )
 }
 
 export default FeatureWithDescription
 
-// cherez refi nahodim visotu <p> i zadajom ejo, ostaljnie <p> otrezajutsja https://ru.reactjs.org/docs/refs-and-the-dom.html
-// esli vsego odin paragraf to knopku chitatj boljshe mozno ne otobrazhatj
-// pochitatj pro svg
+// zavodim state kotorij pri nazhatii na knopku budet pokazivatj paragrafi esli ih boljse 1
+// delaem daljse filtr
 
+
+
+// pochitatj pro svg

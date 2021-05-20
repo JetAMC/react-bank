@@ -17,24 +17,25 @@ function AllOffers(props) {
     // https://ru.reactjs.org/docs/lifting-state-up.html
     // dokumentacija react perepisana na hukah
 
-
     const [sort, setSort] = useState('percent');
     const sortedArr = [...offers.offers].sort(comparators[sort]);
+
+    const [credit, setCredit] = useState(RangeCredit.defaultValue)
+    const [payment, setPayment] = useState(RangePayment.defaultValue);
 
     return(
         <div className="main-page">
             <div className="all-offers">
                 <SortOffers sort={sort} rateSort={setSort} />
-                {sortedArr.map(offer => {
+                {sortedArr.filter(o => o.minInitialPayment * 100 <= payment).map(offer => {
                     return <SingleOffer offer={offer} open={props.open} />
                 })}
             </div>
             <div>
-                <RangeInput data={RangeCredit} />
-                <RangeInput data={RangePayment} />
+                <RangeInput data={RangeCredit} value={credit} onChange={setCredit} />
+                <RangeInput data={RangePayment} value={payment} onChange={setPayment} />
             </div>
         </div>
-
     )
 }
 

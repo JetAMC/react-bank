@@ -175,6 +175,10 @@ body {
   margin-bottom: 18px;
 }
 
+.feature-description :not(:first-child) {
+  display: none;
+}
+
 .main-page {
   width: 100%;
   display: inline-flex;
@@ -238,7 +242,7 @@ input[type="range"]::-moz-range-progress, input[type="range"]::-webkit-slider-ru
   display: flex;
 }
 
-.radio-buttons label {
+.custom-input {
   margin-right: 8px;
   font-size: 12px;
   line-height: 18px;
@@ -248,10 +252,14 @@ input[type="range"]::-moz-range-progress, input[type="range"]::-webkit-slider-ru
   background: rgba(21, 34, 66, 0.06);
 }
 
-/* .custom-input input {
+.label-active {
+  background: rgba(4, 104, 255, 0.1);
+}
+
+.custom-input input {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
-} */
+}
 

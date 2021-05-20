@@ -27,7 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <Route exact path="/AllOffers" component={(props) => <AllOffers {...props} open={open} close={close} oneOffer={oneOffer}/>} />
-      <Redirect to="/AllOffers" />
+      {/* <Redirect to="/AllOffers" /> */}
       <Route path="/AllOffers/:id" component={(props) => <DetailedOffer {...props} open={open} close={close} oneOffer={oneOffer}/>} />
       <PopupSuccess oneOffer={oneOffer} close={close} />
       {/* ... */}
