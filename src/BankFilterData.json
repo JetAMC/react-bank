@@ -1,0 +1,7 @@
+{
+    "bank-vtb": {"name": "bank-vtb", "icon": "VTB"},
+    "bank-gpb": {"name": "bank-gpb", "icon": "Gazprom"},
+    "bank-delta": {"name": "bank-delta", "icon": "Delta"},
+    "bank-psb": {"name": "bank-psb", "icon": "PSB"},
+    "bank-raif": {"name": "bank-raif", "icon": "Raiffaizen"}
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from "classnames"
+import cn from 'classnames'
 
 function RangeInput({ data, value, onChange }) {
     const showValue = e => onChange(e.target.value);
@@ -24,8 +24,8 @@ function RangeInput({ data, value, onChange }) {
                             <span>{option} {data.type}</span>
                             <input type="radio" value={option} name={data.radioName} checked={checked} onChange={showValue} />
                         </label>
-                    )
-                }
+                        )
+                    }
                 )}
             </div>
         </div>
